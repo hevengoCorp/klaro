@@ -3,3 +3,4 @@ dist/klaro.js
 .tmp
 node_modules
 yarn.lock
+.idea

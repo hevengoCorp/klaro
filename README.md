@@ -1,5 +1,11 @@
-# Klaro! A Simple Consent Manager
+> ### Important information
+> this is a fork from the original https://github.com/KIProtect/klaro
+> with the following modifications included
+> - [x] Better Opt-In handling (merged PR118, https://github.com/KIProtect/klaro/pull/118)
+> - [x] Moved toggle-all to the top
+> - [ ] support for alternate html-markup of blocked parts
 
+# Klaro! A Simple Consent Manager
 Klaro [klɛro] is a simple consent manager that helps you to be transparent about the third-party applications on your website. It is designed to be extremely simple, intuitive and easy to use while allowing you to be compliant with all relevant regulations (notably GDPR and ePrivacy).
 
 <p align="center"><img src="dist/assets/demo.gif" /></p>
