@@ -59,7 +59,6 @@ export default class Apps extends React.Component {
         ).length === 0;
 
         return <ul className="cm-apps">
-            {appItems}
             {togglableApps.length > 1 && (
                 <li className="cm-app cm-toggle-all">
                     <AppItem
@@ -72,6 +71,7 @@ export default class Apps extends React.Component {
                     />
                 </li>
             )}
+            {appItems}
         </ul>
 
     }
