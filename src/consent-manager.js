@@ -138,10 +138,16 @@ export default class ConsentManager {
     }
 
     saveConsents(){
+        if (! this.consents.ConsentDocumentationId) {
+            this.consents.ConsentDocumentationId = 'ID-'+(new Date().getTime())+'-'+Math.floor(Math.random() * (99999999 - 11111111) + 11111111);
+        }
         const v = JSON.stringify(this.consents)
         setCookie(this.cookieName, v, this.config.cookieExpiresAfterDays || 120)
         this.confirmed = true
         this.changed = false
+        if (this.config.consentLogUrl) {
+            fetch(this.config.consentLogUrl)
+        }
     }
 
     applyConsents(){

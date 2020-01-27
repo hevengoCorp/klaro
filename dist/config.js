@@ -31,6 +31,12 @@ var klaroConfig = {
     // consented or declines the use of third-party apps.
     mustConsent: false,
 
+    // consent log url
+    // after each consent change sent send a simple GET request to the url to
+    // allow the backend application log the constent change. The backend should
+    // read the klaro cookie and store it for consent documentation
+    // consentLogUrl: 'https://www.example.com',
+
     // You can define the UI language directly here. If undefined, Klaro will
     // use the value given in the global "lang" variable. If that does
     // not exist, it will use the value given in the "lang" attribute of your
