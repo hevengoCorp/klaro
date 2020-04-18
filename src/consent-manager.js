@@ -63,7 +63,7 @@ export default class ConsentManager {
         const consents = {}
         for(var i=0;i<this.config.apps.length;i++){
             const app = this.config.apps[i]
-            consents[app.name] = app.required || this.config.required || false
+            consents[app.name] = app.required || this.config.required || app.default || false
         }
         return consents
     }

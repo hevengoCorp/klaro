@@ -31,6 +31,8 @@ var klaroConfig = {
     // consented or declines the use of third-party apps.
     mustConsent: false,
 
+    enableDeclineButton: true,
+
     // You can define the UI language directly here. If undefined, Klaro will
     // use the value given in the global "lang" variable. If that does
     // not exist, it will use the value given in the "lang" attribute of your
@@ -253,6 +255,7 @@ var klaroConfig = {
         {
             name: 'intercom',
             title: 'Intercom',
+            default: true,
             purposes: ['livechat'],
         },
         {
