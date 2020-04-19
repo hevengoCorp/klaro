@@ -24,16 +24,27 @@ export default class ConsentNotice extends React.Component {
     hide = () => {
         this.setState({modal: false})
     }
-    
+
     saveDefaultsAndHide = () => {
         this.props.manager.acceptDefaults()
         this.props.manager.saveAndApplyConsents()
         this.setState({modal: false})
+        //window.alert("saveDefaultsAndHide");
+        this.reloadWindow();
     }
 
     saveAndHide = () => {
         this.props.manager.saveAndApplyConsents()
         this.setState({modal: false})
+        //window.alert("saveAndHide");
+        this.reloadWindow();
+    }
+
+    reloadWindow = () => {
+        const enableReload = this.props.config.reloadPageAfterSave || false
+        if (enableReload) {
+            window.location = window.location.href.split("?")[0]
+        }
     }
 
     declineAndHide = () => {

@@ -31,7 +31,11 @@ var klaroConfig = {
     // consented or declines the use of third-party apps.
     mustConsent: false,
 
+    // should the "decline" button be visbile
     enableDeclineButton: true,
+
+    // should the page be reloaded after "accept"
+    reloadPageAfterSave: true,
 
     // You can define the UI language directly here. If undefined, Klaro will
     // use the value given in the global "lang" variable. If that does
